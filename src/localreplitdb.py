@@ -81,3 +81,11 @@ class LocalDatabase(Database):
     def close(self) -> None:
         """Close the database file handle."""
         self.db.close()
+
+
+db_path = "/data/local_replit_db.db"
+db: Optional[Database] = LocalDatabase(db_path)
+
+if not db:
+    # The user will see errors if they try to use the database.
+    print('Warning: error initializing database. Replit DB is not configured.')
