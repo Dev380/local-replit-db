@@ -1,7 +1,7 @@
 DB_TABLE_NAME = "replit_db"
 DB_DOCUMENT_ID = 629
 
-from replitdb import Database
+from .replitdb import Database
 from tinydb import TinyDB
 from tinydb.table import Document
 from tinydb.operations import delete
