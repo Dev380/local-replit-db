@@ -84,7 +84,7 @@ class LocalDatabase(Database):
 
 
 db_path = "local_replit_db.db"
-db: optional[Database] = LocalDatabase(db_path)
+db: Database | None = LocalDatabase(db_path)
 
 if not db:
     # The user will see errors if they try to use the database.
