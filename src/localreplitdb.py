@@ -1,12 +1,12 @@
 DB_TABLE_NAME = "replit_db"
 DB_DOCUMENT_ID = 629
 
-from .replitdb import Database
+from . import ReplitDatabase
 from tinydb import TinyDB
 from tinydb.table import Document
 from tinydb.operations import delete
 
-class LocalDatabase(Database):
+class LocalDatabase(ReplitDatabase):
     """Dictionary-like interface for Repl.it Database, backed by TinyDB.
 
     This interface will coerce all values everything to and from JSON.
@@ -84,7 +84,7 @@ class LocalDatabase(Database):
 
 
 db_path = "local_replit_db.db"
-db: Database | None = LocalDatabase(db_path)
+db: LocalDatabase | None = LocalDatabase(db_path)
 
 if not db:
     # The user will see errors if they try to use the database.
