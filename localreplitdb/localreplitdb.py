@@ -86,6 +86,6 @@ class LocalDatabase(ReplitDatabase):
 db_path = "local_replit_db.db"
 db: LocalDatabase | None = LocalDatabase(db_path)
 
-if not db:
+if db is None:
     # The user will see errors if they try to use the database.
     print('Warning: error initializing database. Replit DB is not configured.')
