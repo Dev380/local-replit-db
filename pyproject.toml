@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "localreplitdb"
-version = "0.0.1"
+version = "0.0.2"
 description = "JSON file-backed DB emuulating replit db's API"
 authors = ["Dev380"]
 license = "ISC"
