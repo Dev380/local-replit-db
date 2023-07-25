@@ -1,0 +1,3 @@
+[submodule "replit-py"]
+	path = replit-py
+	url = https://github.com/replit/replit-py

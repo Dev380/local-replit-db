@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "localreplitdb"
+version = "0.0.1"
+description = "JSON file-backed DB emuulating replit db's API"
+authors = ["Dev380"]
+license = "ISC"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+replit = "^3.3"
+tinydb = "^4.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
