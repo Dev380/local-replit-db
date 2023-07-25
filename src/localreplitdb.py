@@ -83,7 +83,7 @@ class LocalDatabase(Database):
         self.db.close()
 
 
-db_path = "/data/local_replit_db.db"
+db_path = "local_replit_db.db"
 db: Optional[Database] = LocalDatabase(db_path)
 
 if not db:
